@@ -21,7 +21,8 @@ Functionality:
 - to encapsulate the state and logic of the calculator a custom hook used
 - implemented result limitation to prevent exceeding the boundaries of safe integers(for alternative 'BigInts' could be used)
 - to inform users about reaching limit of calculations special message provided:
-  ![Error message](https://imgur.com/pbpA130)
+
+[![Error message](https://i.postimg.cc/yNxZGNZ0/Screenshot-2024-01-19-at-15-48-53.png)](https://postimg.cc/8F8cJNwC)
 
 Codestyle:
 
@@ -49,12 +50,10 @@ Additional features:
 
 Switching between dark and light themes:
 
-![Dark theme](https://imgur.com/SyVMJvE)
+[![Dark theme](https://i.postimg.cc/G3qyJYNq/Screenshot-2024-01-19-at-15-32-48.png)](https://postimg.cc/3W0N3y3v)
 
-![Light theme](https://imgur.com/Zn08XFq)
+[![Light theme](https://i.postimg.cc/Gt9jRjVh/Screenshot-2024-01-19-at-15-07-08.png)](https://postimg.cc/K3STrtmd)
 
 Basic adaptation for mobile devices(320px-768px):
 
-![Mobile view on 425px device](https://drive.google.com/file/d/1XdZMUnx1CHxGDbas92pd4bpN9x-AxQRO/view?usp=sharing)https://drive.google.com/file/d/1XdZMUnx1CHxGDbas92pd4bpN9x-AxQRO/view?usp=sharing
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/czLW2Ue" data-context="false" ><a href="//imgur.com/a/czLW2Ue"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+[![Mobile preview](https://i.postimg.cc/MT9gpvFd/Screenshot-2024-01-19-at-15-17-25.png)](https://postimg.cc/47hW8NZ9)
