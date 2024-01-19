@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Input } from "../ui/input";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -7,19 +7,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import { Button } from "../ui/button";
-import { IRow } from "../calculator/Calculator";
-import { Switch } from "../ui/switch";
-import { Label } from "../ui/label";
-
-interface IRowProps {
-  row: IRow;
-  id: string;
-  handleSignChange: (id: string, value: "+" | "-") => void;
-  handleValueChange: (id: string, value: string) => void;
-  handleToggleRow: (id: string) => void;
-  handleDeleteRow: (id: string) => void;
-}
+import { Button } from "@/components/ui/button";
+import { IRowProps } from "@/lib/types/interfaces";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
 
 const Row: React.FC<IRowProps> = ({
   row,

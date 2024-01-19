@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   const { theme } = useTheme();
   useEffect(() => console.log("fo0ter render"));
   return (
-    <footer className="flex justify-between grow-0">
+    <footer className="flex grow-0 flex-col items-center gap-y-4 md:flex-row md:justify-between">
       <div className="flex gap-4">
         <a
           className="transition opacity-100 duration-300 ease-linear hover:opacity-75 hover:duration-150"
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           <GitHubLogo />
         </a>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col items-center gap-4 md:flex-row">
         <span>Made for</span>
         <img
           className="h-[30px]"

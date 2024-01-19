@@ -1,72 +1,34 @@
-import React, { useState, useEffect } from "react";
-import Row from "@/components/row/Row";
+import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { nanoid } from "nanoid";
-
-export interface IRow {
-  id: string;
-  sign: "+" | "-";
-  value: number;
-  isEnabled: boolean;
-}
+import Row from "@/components/row/Row";
+import useCalculator from "@/hooks/useCalculator";
+import addThousandSeparators from "@/lib/helpers/addThousandSeparators";
+import { MAX_SAFE_INTEGER } from "@/lib/consts";
 
 const Calculator: React.FC = () => {
-  const [rows, setRows] = useState<IRow[]>([
-    { id: nanoid(), sign: "+", value: 0, isEnabled: true },
-    { id: nanoid(), sign: "+", value: 0, isEnabled: true },
-    { id: nanoid(), sign: "+", value: 0, isEnabled: true },
-  ]);
+  const {
+    rows,
+    result,
+    addRow,
+    deleteRow,
+    toggleRow,
+    changeValue,
+    changeSign,
+  } = useCalculator(3);
 
-  const calculateResult = (): number => {
-    console.log("result calculated");
-    return rows
-      .filter((row) => row.isEnabled)
-      .reduce(
-        (acc, row) => (row.sign === "+" ? acc + row.value : acc - row.value),
-        0,
-      );
-  };
+  const formattedResult = addThousandSeparators(result.toString());
+  const isSafe = result < MAX_SAFE_INTEGER;
 
-  const addRow = () => {
-    setRows([...rows, { id: nanoid(), sign: "+", value: 0, isEnabled: true }]);
-  };
-
-  const deleteRow = (id: string) => {
-    const newRows = rows.filter((row) => row.id !== id);
-    setRows(newRows);
-  };
-
-  const toggleRow = (id: string) => {
-    const newRows = rows.map((row) =>
-      row.id === id ? { ...row, isEnabled: !row.isEnabled } : row,
-    );
-    setRows(newRows);
-  };
-
-  const changeValue = (id: string, value: string) => {
-    const newRows = rows.map((row) =>
-      row.id === id ? { ...row, value: parseInt(value, 10) || 0 } : row,
-    );
-    setRows(newRows);
-  };
-
-  const changeSign = (id: string, newSign: "+" | "-") => {
-    const newRows = rows.map((row) =>
-      row.id === id ? { ...row, sign: newSign } : row,
-    );
-    setRows(newRows);
-  };
-
-  useEffect(() => console.log("calc render"));
+  useEffect(() => console.log(isSafe));
 
   return (
     <div className="flex flex-col gap-4 w-[80%] pt-10 pb-10">
       <Button className="w-[80px]" onClick={() => addRow()}>
         Add row
       </Button>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-4 md:gap-2">
         {rows.map((row) => (
-          <li className="flex gap-2" key={row.id}>
+          <li className="flex flex-col gap-2 md:flex-row" key={row.id}>
             <Row
               row={row}
               id={row.id}
@@ -78,7 +40,13 @@ const Calculator: React.FC = () => {
           </li>
         ))}
       </ul>
-      <div>Result: {calculateResult()}</div>
+      <p className={`flex ${!isSafe && "text-destructive dark:text-red-600"}`}>
+        Result: {formattedResult}
+      </p>
+      <span className="min-h-[72px] text-left md:min-h-[24px] text-destructive dark:text-red-600">
+        {!isSafe &&
+          "Sorry, current result is exceeding the boundaries of safe integers!"}
+      </span>
     </div>
   );
 };
