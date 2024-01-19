@@ -55,4 +55,4 @@ Switching between dark and light themes:
 
 Basic adaptation for mobile devices(320px-768px):
 
-![Mobile view on 425px device](https://photos.app.goo.gl/qi6Ra8JF44rxY2g59)
+![Mobile view on 425px device](https://photos.google.com/share/AF1QipM7npZp9SDz5AqD8m_FXcQi8wobhENEfbr_W7-YGyDpUXMPQdpSxh3kSCbYX2PlkQ/photo/AF1QipN_zi7STN6P6-H-yKHNbl7BwX4DLIQGHwXrYLtJ?key=WXhQU1pVLTl5Y1NYVHFGdEFpeWxXZm9KV3pDaS1B)
