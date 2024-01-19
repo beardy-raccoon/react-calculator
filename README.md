@@ -55,4 +55,6 @@ Switching between dark and light themes:
 
 Basic adaptation for mobile devices(320px-768px):
 
-![Mobile view on 425px device](https://drive.google.com/file/d/1XdZMUnx1CHxGDbas92pd4bpN9x-AxQRO/view?usp=sharing)
+![Mobile view on 425px device](https://drive.google.com/file/d/1XdZMUnx1CHxGDbas92pd4bpN9x-AxQRO/view?usp=sharing)https://drive.google.com/file/d/1XdZMUnx1CHxGDbas92pd4bpN9x-AxQRO/view?usp=sharing
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/czLW2Ue" data-context="false" ><a href="//imgur.com/a/czLW2Ue"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
