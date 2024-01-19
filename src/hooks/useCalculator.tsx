@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { IRow } from "@/lib/types/interfaces";
 import { MAX_SAFE_INTEGER } from "@/lib/consts";
 import createRow from "@/lib/helpers/createRow";
@@ -7,6 +7,9 @@ const useCalculator = (initialRowCount: number) => {
   const [rows, setRows] = useState<IRow[]>(
     Array.from({ length: initialRowCount }, () => createRow()),
   );
+
+  // Alternative approach is to use BigInt which can represent integers of arbitrary precision
+  // instead of limiting result
 
   /*const calculateResult = () => {
     return rows
@@ -59,9 +62,9 @@ const useCalculator = (initialRowCount: number) => {
     );
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Additional side effects or calculations can be placed here
-  }, [rows]);
+  }, [rows]);*/
 
   return {
     rows,
