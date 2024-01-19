@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { IRowProps } from "@/lib/types/interfaces";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { nanoid } from "nanoid";
 
 const Row: React.FC<IRowProps> = ({
   row,
@@ -19,8 +20,6 @@ const Row: React.FC<IRowProps> = ({
   handleToggleRow,
   handleDeleteRow,
 }) => {
-  useEffect(() => console.log("row render"));
-
   return (
     <>
       <Select
@@ -37,9 +36,10 @@ const Row: React.FC<IRowProps> = ({
         </SelectContent>
       </Select>
       <Input
+        id={nanoid()}
         type="number"
         placeholder={row?.value.toString()}
-        onChange={(e) => handleValueChange(row.id, e.target.value)}
+        onChange={(e) => handleValueChange(row?.id, e.target.value)}
         disabled={!row?.isEnabled}
       />
       <Button className="min-w-[80px]" onClick={() => handleDeleteRow(row.id)}>
@@ -49,11 +49,11 @@ const Row: React.FC<IRowProps> = ({
         <Switch
           id="row-switcher"
           checked={row.isEnabled}
-          title={row.isEnabled ? "Disable row" : "Enable row"}
+          title={row?.isEnabled ? "Disable row" : "Enable row"}
           onClick={() => handleToggleRow(row.id)}
         />
         <Label className="flex" htmlFor="row-switcher">
-          {row.isEnabled ? "Disable row" : "Enable row"}
+          {row?.isEnabled ? "Disable row" : "Enable row"}
         </Label>
       </div>
     </>

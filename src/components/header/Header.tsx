@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { UserRound } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle/ThemeToggle";
 
 const Header: React.FC = () => {
-  useEffect(() => console.log("header render"));
   return (
     <header className="flex items-center justify-between grow-0">
       <UserRound />

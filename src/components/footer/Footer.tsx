@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logoBlue from "@/assets/logo_coolshop_72_blue.png";
 import logoWhite from "@/assets/logo_coolshop_72_white.png";
 import LinkedInLogo from "@/components/ui/linkedInLogo";
@@ -7,7 +7,6 @@ import { useTheme } from "@/components/theme-provider/ThemeProvider";
 
 const Footer: React.FC = () => {
   const { theme } = useTheme();
-  useEffect(() => console.log("fo0ter render"));
   return (
     <footer className="flex grow-0 flex-col items-center gap-y-4 md:flex-row md:justify-between">
       <div className="flex gap-4">

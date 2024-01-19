@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Calculator from "@/components/calculator/Calculator";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import "./App.css";
 
 const App: React.FC = () => {
-  useEffect(() => console.log("app render"));
   return (
     <div className="flex flex-col min-h-[95svh]">
       <Header />

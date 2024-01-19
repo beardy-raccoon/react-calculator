@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import Row from "@/components/row/Row";
 import useCalculator from "@/hooks/useCalculator";
@@ -18,8 +18,6 @@ const Calculator: React.FC = () => {
 
   const formattedResult = addThousandSeparators(result.toString());
   const isSafe = result < MAX_SAFE_INTEGER;
-
-  useEffect(() => console.log(isSafe));
 
   return (
     <div className="flex flex-col gap-4 w-[80%] pt-10 pb-10">
