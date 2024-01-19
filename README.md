@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# Simple row calculator(React + TypeScript + Vite + Shadcn UI +TailwindCSS)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c3051ef8-9877-4bc4-8908-e5fa28a2a8c7/deploy-status)](https://app.netlify.com/sites/my-simple-react-calculator/deploys)
 
@@ -24,7 +24,7 @@ Functionality:
 
 [![Error message](https://i.postimg.cc/yNxZGNZ0/Screenshot-2024-01-19-at-15-48-53.png)](https://postimg.cc/8F8cJNwC)
 
-Codestyle:
+# Codestyle:
 
 To uphold the best coding standards provided and configured Eslint and Prettier
 
@@ -46,7 +46,7 @@ Benefits of Shadcn UI:
 - Accessibility
 - Fine-grained control and extensibility
 
-Additional features:
+# Additional features:
 
 Switching between dark and light themes:
 
